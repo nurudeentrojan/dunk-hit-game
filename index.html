@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dunk Hit - Basketball Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-header">
+            <h1>DUNK HIT</h1>
+            <div class="stats">
+                <div class="stat">
+                    <span class="label">Score</span>
+                    <span class="value" id="score">0</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Best</span>
+                    <span class="value" id="best">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <canvas id="gameCanvas" width="400" height="600"></canvas>
+        </div>
+
+        <div class="game-controls">
+            <button id="startBtn" class="btn btn-primary">Start Game</button>
+            <button id="pauseBtn" class="btn btn-secondary" disabled>Pause</button>
+            <p class="instructions">Click or tap the basketball to aim and shoot!</p>
+        </div>
+
+        <div id="gameOverScreen" class="modal hidden">
+            <div class="modal-content">
+                <h2>Game Over!</h2>
+                <div class="final-stats">
+                    <p>Final Score: <span id="finalScore">0</span></p>
+                    <p>Best Score: <span id="bestScore">0</span></p>
+                </div>
+                <button id="restartBtn" class="btn btn-primary">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
